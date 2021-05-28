@@ -131,6 +131,7 @@ namespace Metodos_Propiedades
             this.btnCrearLinea.TabIndex = 8;
             this.btnCrearLinea.Text = "Crear Linea";
             this.btnCrearLinea.UseVisualStyleBackColor = true;
+            this.btnCrearLinea.Click += new System.EventHandler(this.btnCrearLinea_Click);
             // 
             // frmLinea
             // 
