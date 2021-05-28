@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace Metodos_Propiedades
 {
-    public partial class Form1 : Form
+    public partial class frmLinea : MaterialForm
     {
-        public Form1()
+        public frmLinea()
         {
             InitializeComponent();
         }
