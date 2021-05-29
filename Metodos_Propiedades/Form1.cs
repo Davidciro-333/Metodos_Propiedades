@@ -24,7 +24,7 @@ namespace Metodos_Propiedades
         {
             try
             {
-                Pen pen = new Pen(Brushes.Red);
+                Pen pen = new Pen(Brushes.BurlyWood);
                 double Xinicial = double.Parse(txtXinicial.Text);
                 double Yinicial = double.Parse(txtYinicial.Text);
                 double Xfinal = double.Parse(txtXfinal.Text);
@@ -41,6 +41,12 @@ namespace Metodos_Propiedades
                 MessageBox.Show("Digite valores de tipo numerico");
             }
             
+        }
+
+        private void btnPasarPrendas_Click(object sender, EventArgs e)
+        {
+            frmPrendas prendas = new frmPrendas();
+            prendas.Show();
         }
     }
 }
