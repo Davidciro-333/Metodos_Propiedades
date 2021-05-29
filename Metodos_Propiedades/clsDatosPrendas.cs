@@ -11,6 +11,7 @@ namespace Metodos_Propiedades
         private string TipoPrenda;
         private string Marca;
         private int Talla;
+        private string Color;
         private double Precio;
 
         private static int CantPrendas = 0;
@@ -20,28 +21,45 @@ namespace Metodos_Propiedades
             TipoPrenda = "";
             Marca = "";
             Talla = 0;
+            Color = "";
             Precio = 0;
         }
 
-        public clsDatosPrendas(string TipoPrenda, string Marca, int Talla, double Precio)
+        public clsDatosPrendas(string TipoPrenda, string Marca, int Talla, string Color, double Precio)
         {
             this.TipoPrenda = TipoPrenda;
             this.Marca = Marca;
             this.Talla = Talla;
+            this.Color = Color;
             this.Precio = Precio;
         }
 
-        public clsDatosPrendas(string TipoPrenda, string Marca, double Talla, double Precio)
+        public clsDatosPrendas(string TipoPrenda, string Marca, double Talla, string Color, double Precio)
         {
             this.TipoPrenda = TipoPrenda;
             this.Marca = Marca;
             this.Talla = (int) Talla;
+            this.Color = Color;
             this.Precio = (int) Precio;
         }
 
+        public string obtenerTipoPrenda()
+        {
+            return TipoPrenda;
+        }
+
+        public string obtenerMarca()
+        {
+            return Marca;
+        }
         public int obtenerTalla()
         {
             return Talla;
+        }
+
+        public string obtenerColor()
+        {
+            return Color;
         }
 
         public double obtenerPrecio()
@@ -49,9 +67,24 @@ namespace Metodos_Propiedades
             return Precio;
         }
 
+        public void cambiarTipoPrenda(string TipoPrenda)
+        {
+            this.TipoPrenda = TipoPrenda;
+        }
+
+        public void cambiarMarca(string Marca)
+        {
+            this.Marca = Marca;
+        }
+
         public void cambiarTalla(int Talla)
         {
             this.Talla = Talla;
+        }
+
+        public void cambiarColor(string Color)
+        {
+            this.Color = Color;
         }
 
         public void cambiarPrecio(double Precio)

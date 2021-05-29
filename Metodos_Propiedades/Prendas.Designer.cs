@@ -44,12 +44,12 @@ namespace Metodos_Propiedades
             this.txtContPrenda = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.dtgPrendas = new System.Windows.Forms.DataGridView();
+            this.tmrCerrarLinea = new System.Windows.Forms.Timer(this.components);
             this.clmTipoPrenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tmrCerrarLinea = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPrendas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +107,7 @@ namespace Metodos_Propiedades
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(299, 226);
+            this.label5.Location = new System.Drawing.Point(316, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 19);
             this.label5.TabIndex = 5;
@@ -129,6 +129,11 @@ namespace Metodos_Propiedades
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Items.AddRange(new object[] {
+            "Arquitect",
+            "Pat Primo",
+            "Nike",
+            "Gef"});
             this.cmbMarca.Location = new System.Drawing.Point(353, 117);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(121, 21);
@@ -144,6 +149,11 @@ namespace Metodos_Propiedades
             // cmbColor
             // 
             this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Items.AddRange(new object[] {
+            "Negro",
+            "Blanco",
+            "Gris",
+            "Azul"});
             this.cmbColor.Location = new System.Drawing.Point(353, 153);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(121, 21);
@@ -158,20 +168,22 @@ namespace Metodos_Propiedades
             // 
             // txtContPrenda
             // 
-            this.txtContPrenda.Location = new System.Drawing.Point(425, 227);
+            this.txtContPrenda.Location = new System.Drawing.Point(442, 227);
             this.txtContPrenda.Name = "txtContPrenda";
-            this.txtContPrenda.Size = new System.Drawing.Size(49, 20);
-            this.txtContPrenda.TabIndex = 11;
+            this.txtContPrenda.ReadOnly = true;
+            this.txtContPrenda.Size = new System.Drawing.Size(32, 20);
+            this.txtContPrenda.TabIndex = 12;
             // 
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(527, 223);
+            this.btnIngresar.Location = new System.Drawing.Point(137, 222);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(87, 23);
-            this.btnIngresar.TabIndex = 12;
+            this.btnIngresar.TabIndex = 11;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // dtgPrendas
             // 
@@ -184,8 +196,14 @@ namespace Metodos_Propiedades
             this.clmPrecio});
             this.dtgPrendas.Location = new System.Drawing.Point(52, 253);
             this.dtgPrendas.Name = "dtgPrendas";
+            this.dtgPrendas.ReadOnly = true;
             this.dtgPrendas.Size = new System.Drawing.Size(562, 169);
             this.dtgPrendas.TabIndex = 13;
+            // 
+            // tmrCerrarLinea
+            // 
+            this.tmrCerrarLinea.Interval = 1000;
+            this.tmrCerrarLinea.Tick += new System.EventHandler(this.tmrCerrarLinea_Tick);
             // 
             // clmTipoPrenda
             // 
@@ -216,11 +234,6 @@ namespace Metodos_Propiedades
             this.clmPrecio.HeaderText = "Precio";
             this.clmPrecio.Name = "clmPrecio";
             this.clmPrecio.ReadOnly = true;
-            // 
-            // tmrCerrarLinea
-            // 
-            this.tmrCerrarLinea.Interval = 1000;
-            this.tmrCerrarLinea.Tick += new System.EventHandler(this.tmrCerrarLinea_Tick);
             // 
             // frmPrendas
             // 
@@ -265,11 +278,11 @@ namespace Metodos_Propiedades
         private System.Windows.Forms.TextBox txtContPrenda;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.DataGridView dtgPrendas;
+        private System.Windows.Forms.Timer tmrCerrarLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTipoPrenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTalla;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmColor;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPrecio;
-        private System.Windows.Forms.Timer tmrCerrarLinea;
     }
 }
