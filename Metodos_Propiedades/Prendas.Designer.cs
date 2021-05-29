@@ -29,7 +29,6 @@ namespace Metodos_Propiedades
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblTipoPrenda = new System.Windows.Forms.Label();
             this.lblTalla = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@ namespace Metodos_Propiedades
             this.txtContPrenda = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.dtgPrendas = new System.Windows.Forms.DataGridView();
-            this.tmrCerrarLinea = new System.Windows.Forms.Timer(this.components);
             this.clmTipoPrenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -200,11 +198,6 @@ namespace Metodos_Propiedades
             this.dtgPrendas.Size = new System.Drawing.Size(562, 169);
             this.dtgPrendas.TabIndex = 13;
             // 
-            // tmrCerrarLinea
-            // 
-            this.tmrCerrarLinea.Interval = 1000;
-            this.tmrCerrarLinea.Tick += new System.EventHandler(this.tmrCerrarLinea_Tick);
-            // 
             // clmTipoPrenda
             // 
             this.clmTipoPrenda.HeaderText = "Tipo Prenda";
@@ -278,7 +271,6 @@ namespace Metodos_Propiedades
         private System.Windows.Forms.TextBox txtContPrenda;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.DataGridView dtgPrendas;
-        private System.Windows.Forms.Timer tmrCerrarLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTipoPrenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTalla;
